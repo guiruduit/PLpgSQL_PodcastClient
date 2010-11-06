@@ -1,12 +1,5 @@
 CREATE SCHEMA PodcastClient;
 
-CREATE TABLE PodcastClient.Subject (
-	PK_Subject_Name 
-		VARCHAR (60)
-		NOT NULL
-        PRIMARY KEY
-);
-
 CREATE TABLE PodcastClient.Podcast (
 	PK_Podcast_Name
 		VARCHAR (100)
@@ -35,9 +28,6 @@ CREATE TABLE PodcastClient.Tag (
 		VARCHAR (40)
 		PRIMARY KEY
 		NOT NULL,
-	FK_Subject_Name
-		VARCHAR (60)
-		REFERENCES PodcastClient.Subject (PK_Subject_Name)
 );
 
 CREATE TABLE PodcastClient.Episode_Has_Tag (

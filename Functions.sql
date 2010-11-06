@@ -60,3 +60,19 @@ LANGUAGE plpgsql;
 
 CREATE TRIGGER Create_Podcast_AndOr_PodcastOwner BEFORE INSERT ON PodcastClient.PodcastOwner
 FOR EACH ROW EXECUTE PROCEDURE PodcastClient.Create_Podcast_AndOr_PodcastOwner()
+
+/* Insert_Episode */
+/* 
+CREATE OR REPLACE FUNCTION PodcastClient.Insert_Episode_With_Tags(Episode_ID VARCHAR, Podcast_Name VARCHAR, URL VARCHAR, Duration_Time TIME, Tags VARCHAR[]) RETURNS void AS
+$Insert_Episode_With_Tags$
+	DECLARE
+	BEGIN
+		INSERT INTO PodcastClient.Episode VALUES (Episode_ID, Podcast_Name, URL, Duration_Time);
+		FOR Tag IN Tags LOOP
+			INSERT INTO PodcastClient.Tag VALUES (Tag);
+			INSERT INTO PodcastClient.Episode_Has_Tag VALUES (Episode_ID, Tag);
+		END LOOP;
+	END
+$Insert_Episode_With_Tags$
+LANGUAGE plpgsql;
+*/
