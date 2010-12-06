@@ -27,7 +27,7 @@ CREATE TABLE PodcastClient.Tag (
 	PK_Tag
 		VARCHAR (40)
 		PRIMARY KEY
-		NOT NULL,
+		NOT NULL
 );
 
 CREATE TABLE PodcastClient.Episode_Has_Tag (

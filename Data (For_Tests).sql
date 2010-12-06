@@ -1,5 +1,3 @@
-INSERT INTO PodcastClient.Subject VALUES ('Tecnologia'), ('Variedades');
-
 INSERT INTO PodcastClient.Podcast VALUES
 	('Guanacast', ''),
 	('Baguete', 'http://www.baguete.com.br/rss/noticias/feed'),
@@ -43,21 +41,21 @@ INSERT INTO PodcastClient.Episode (PK_Episode_ID, FK_Podcast_Name) VALUES
 	('Olha o Paradão', 'Baguete');
 	
 INSERT INTO PodcastClient.Tag VALUES
-	('Noticias', 'Tecnologia'),
-	('Hardware', 'Tecnologia'), ('Placa Mãe', 'Tecnologia'),
-	('Verdade', 'Tecnologia'), ('Mentira', 'Tecnologia'),
-	('Funciona', 'Tecnologia'),
-	('SEO', 'Tecnologia'),
-	('Kingo Labs', 'Tecnologia'), ('Migre.me', 'Tecnologia'),
-	('Twitter', 'Tecnologia'),
-	('IPad', 'Tecnologia'),
-	('Empreendedorismo', 'Tecnologia'), ('Software Livre', 'Tecnologia'),
-	('Windows', 'Tecnologia'), ('Seven', 'Tecnologia'),
-	('Videolog', 'Tecnologia'),
-	('DevinRio', 'Tecnologia'),
-	('Freeware', 'Tecnologia'), ('Código Aberto', 'Tecnologia'),
-	('Profissão', 'Tecnologia'), ('Programador', 'Tecnologia'),
-	('CMS', 'Tecnologia');
+	('Noticias'),
+	('Hardware'), ('Placa Mãe'),
+	('Verdade'), ('Mentira'),
+	('Funciona'),
+	('SEO'),
+	('Kingo Labs'), ('Migre.me'),
+	('Twitter'),
+	('IPad'),
+	('Empreendedorismo'), ('Software Livre'),
+	('Windows'), ('Seven'),
+	('Videolog'),
+	('DevinRio'),
+	('Freeware'), ('Código Aberto'),
+	('Profissão'), ('Programador'),
+	('CMS');
 	
 INSERT INTO PodcastClient.Episode_Has_Tag VALUES
 	('Noticias', '82, Noticias Semanais'),

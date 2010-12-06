@@ -1,3 +1,5 @@
+CREATE LANGUAGE plpgsql;
+
 /* Return_Recomended_Episodes */
 
 CREATE OR REPLACE FUNCTION PodcastClient.Return_Recomended_Episodes() RETURNS TRIGGER AS
@@ -35,7 +37,7 @@ $Is_Episode_Repeated$
 LANGUAGE plpgsql;
 
 CREATE TRIGGER Is_Episode_Repeated BEFORE INSERT ON PodcastClient.User_Got_Episode
-FOR EACH ROW EXECUTE PROCEDURE PodcastClient.Is_Episode_Repeated()
+FOR EACH ROW EXECUTE PROCEDURE PodcastClient.Is_Episode_Repeated();
 
 /* Create_Podcast_AndOr_PodcastOwner */
 
